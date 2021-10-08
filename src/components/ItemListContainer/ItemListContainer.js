@@ -1,27 +1,18 @@
 import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
-
-
+import ItemList from '../ItemList/ItemList'
 
 
 const ItemListContainer = () =>{
 
-  const onAdd = (contador) => {
-    alert(`Has agregado ${contador} prendas`);
-  }
+  
     return (
-      <div className='container p-3'>
-      
-          <ItemCount stock={5} onAdd={onAdd}/>
-          
-      </div>
-
-
-        
+  
+          <ItemList/>
     )
 }
 
 export default ItemListContainer 
 
-//Botón del carrito
+
 
