@@ -13,7 +13,7 @@ const Item = ({ name, thumbnail, price, id, stock }) => {
       <img className="product-card__image" src={thumbnail} alt="" />
 
       <h3 className="product-card__name">{name}</h3>
-      <span className="product-card__name">${price}</span>
+      <span className="product-card__name">$ {price}</span>
 
       <ItemCount stock={stock} onAdd={onAdd} initial={1} />
     </article>
