@@ -1,8 +1,12 @@
+import '../../src/components/styles/home.css'
 
 function Home() {
 
   return (
-    <h1>Home</h1>
+    <section className="home">
+      <h1>Home</h1>
+    </section>
+    
   )
 }
 
