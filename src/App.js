@@ -7,6 +7,8 @@ import Productos from './Secciones/Productos';
 import Home from './Secciones/Home';
 import Contacto from './Secciones/Contacto';
 import ItemList from './components/ItemList/ItemList';
+import Cart from './components/Cart/Cart';
+import CartContextProvider from './Context/cartContext';
 
 
 
@@ -16,6 +18,7 @@ import ItemList from './components/ItemList/ItemList';
 function App() {
 
   return (
+    <CartContextProvider>
     <BrowserRouter>
       <Navbar/>
       <Switch>
@@ -36,8 +39,13 @@ function App() {
           <Contacto/>
         </Route>
 
+        <Route  exact path='/cart'>
+          <Cart/>
+        </Route>
+
       </Switch>
     </BrowserRouter>
+    </CartContextProvider>
   )
 }
 

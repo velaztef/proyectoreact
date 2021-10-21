@@ -17,7 +17,7 @@ const Item = ({ name, thumbnail, price, id, stock }) => {
       <span className="product-card__name">$ {price}</span>
       <Button variant='dark'><NavLink to={`/productos/${id}`} className='link'>Mas detalles</NavLink></Button>
 
-      <ItemCount stock={stock} onAdd={onAdd} initial={1} />
+
     </article>
   );
 };
