@@ -38,9 +38,11 @@ const ItemDetail = ({ item }) => {
         }
 
         {
-          show? <Button variant='dark'><Link to={'/cart'} className='link'>Finalizar compra</Link></Button>:null
+          show? <Button variant='dark' className="button"><Link to={'/cart'} className='link'>Finalizar compra</Link></Button>:null
         }
-        
+        {
+          show? <Button variant='dark' className="button"><Link to={'/productos'} className='link'>Seguir Comprando</Link></Button>:null
+        }
       </div>
     </article>
   );

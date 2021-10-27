@@ -15,7 +15,7 @@ const Item = ({ name, thumbnail, price, id, stock }) => {
 
       <h3 className="product-card__name">{name}</h3>
       <span className="product-card__name">$ {price}</span>
-      <Button variant='dark'><NavLink to={`/productos/${id}`} className='link'>Mas detalles</NavLink></Button>
+      <Button variant='dark' className="button"><NavLink to={`/productos/${id}`} className='link'>Mas detalles</NavLink></Button>
 
 
     </article>

@@ -1,5 +1,6 @@
 import { useState } from "react"
 import '../styles/ItemCounts.css'
+import Button from 'react-bootstrap/Button';
 
 export default function Contador ({stock, onAdd}) {
     const [contador, setContador] = useState(0)
@@ -23,25 +24,25 @@ export default function Contador ({stock, onAdd}) {
               <button
                className="contador_container_boton"
                onClick ={sumar}>
-               Sumar 
+               +
               </button>
               <span className="count-container__qty">{contador}</span>
               <button 
               className="contador_container_boton"
               onClick = {restar}> 
-              Restar 
+              - 
               </button>
               </div>
          
              </div>
 
              <div className="boton_cart">
-             <button 
+             <Button variant='dark' className="button"
              onClick ={() => onAdd (contador) }
              disabled={stock === 0 ? true : null}
               > 
              Agregar al carrito
-             </button>
+             </Button>
              </div>
              
         </div>

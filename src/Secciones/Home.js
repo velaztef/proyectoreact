@@ -4,7 +4,7 @@ function Home() {
 
   return (
     <section className="home">
-      <h1>Home</h1>
+      <h1 className="title_text">TIENDA DE ROPA NOVA</h1>
     </section>
     
   )

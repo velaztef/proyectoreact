@@ -1,6 +1,10 @@
 .title_text{
 color: #000;
 text-align: center;
+padding: 5rem;
+background-color: rgba(0, 0, 0, 0.5);
+width: 50%;
+transform: translateX(50%);
 }
 
 .img_product{
@@ -17,4 +21,8 @@ text-align: center;
     text-decoration: none;
     color: rgb(131, 129, 129);
     
+}
+
+.button{
+    margin: 3rem;
 }
