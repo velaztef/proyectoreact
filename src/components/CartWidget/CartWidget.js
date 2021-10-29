@@ -5,13 +5,12 @@ import { useCartContext } from '../../Context/cartContext';
 
 const CartWidget = () => {
     
-    const {cartList} = useCartContext();
-    var totalItems = (cartList.length);
+    const {qBuy} = useCartContext();
 
     return (
             <div>
                 <IoCartSharp/>
-                <div className="qty-display">{totalItems}</div>
+                <div className="qty-display">{qBuy}</div>
             </div>
     )
 }

@@ -12,24 +12,34 @@ function CartContextProvider ({children}){
         setCartList([...cartList, item]);
     }
 
+    const [qBuy, setqBuy] = useState(0);
+
+    const addCart = (contador) => {
+        setqBuy (qBuy+contador)
+      }
+
     function clear() {
-        setCartList([])
+        setCartList([]);
+        setqBuy(0)
     }
 
     const clearItem = (id) => {
-        let index = cartList.findIndex ((item) => item.item.id === id);
-        cartList.splice(index, 1)
+        let item = cartList.find(item => item.item.id === id);
+        let index = cartList.indexOf(item);
+        cartList.splice(index,1);
+        setqBuy (qBuy-item.cantidad)
         setCartList([...cartList])
-    }
+      }
 
-    console.log(cartList);
 
     return(
         <CartContext.Provider value={{
             cartList,
             addItem,
+            addCart,
             clear, 
-            clearItem
+            clearItem,
+            qBuy, 
         }}>
             {children}
         </CartContext.Provider>

@@ -1,8 +1,11 @@
+h1, h2, h3, h4, h5, h6{
+    margin: 3rem;
+}
+
 .title_text{
-color: #000;
+color: rgb(228, 222, 222);
 text-align: center;
 padding: 5rem;
-background-color: rgba(0, 0, 0, 0.5);
 width: 50%;
 transform: translateX(50%);
 }

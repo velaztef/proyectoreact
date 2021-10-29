@@ -8,19 +8,37 @@ import { useCartContext } from '../../Context/cartContext';
 
 const ItemDetail = ({ item }) => {
 
-  const {cartList, addItem} = useCartContext();
-  console.log(cartList);
+  const {cartList, addItem, addCart} = useCartContext();
 
   const [show, setShow] = useState (false);
 
   const [hide, setHide] = useState (true);
 
+
   const onAdd = (contador) => {
-    addItem({item:item, cantidad: contador});
-    alert(`Has agregado ${contador} prendas`);
+    if (cartList.length === 0) {
+    addItem({item: item, cantidad: contador});
+    addCart(contador);
+    alert(`Has agregado al carrito ${contador} ${item.name}`);
     setShow(true);
     setHide(false);
-  }
+    } else  {
+      let idDouble = cartList.find(item => item.item.id === item.id)
+      if (idDouble) {
+        alert (`Ud agrego ${contador} unidades al carrito`);
+        addCart(contador);
+        idDouble.cantidad = idDouble.cantidad+contador;
+        setShow(true);
+        setHide(false);
+      } else {
+        alert (`Ud agrego ${contador} unidades al carrito`);
+        addCart(contador);
+        setShow(true);
+        setHide(false);
+        addItem({item: item, cantidad: contador})
+      }
+    }
+  };
 
   return (
     <article className="product-detail">
@@ -29,7 +47,7 @@ const ItemDetail = ({ item }) => {
         <h2 className="name">{item.name}</h2>
         <p className="description">{item.description}</p>
         <ul className="info-grid">
-          <li>Price: $ {item.price}</li>
+          <li>Precio: $ {item.price}</li>
           <li>Size:{item.size}</li>
           <li>Type:{item.type}</li>
         </ul>
