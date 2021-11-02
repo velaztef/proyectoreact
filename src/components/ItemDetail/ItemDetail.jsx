@@ -45,6 +45,7 @@ const ItemDetail = ({ item }) => {
       <img src={item.thumbnail} alt="" className="product-detail__img" />
       <div className="product-detail__info">
         <h2 className="name">{item.name}</h2>
+        <p className="description">categoría: {item.category}</p>
         <p className="description">{item.description}</p>
         <ul className="info-grid">
           <li>Precio: $ {item.price}</li>
@@ -59,7 +60,7 @@ const ItemDetail = ({ item }) => {
           show? <Button variant='dark' className="button"><Link to={'/cart'} className='link'>Finalizar compra</Link></Button>:null
         }
         {
-          show? <Button variant='dark' className="button"><Link to={'/productos'} className='link'>Seguir Comprando</Link></Button>:null
+          show? <Button variant='dark' className="button"><Link to={'/'} className='link'>Seguir Comprando</Link></Button>:null
         }
       </div>
     </article>
