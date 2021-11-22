@@ -1,8 +1,19 @@
-# Getting Started with Create React App
+# Web App developed with React JS by Stefania Velazquez for Coderhouse ReactJS course.
+
+This proyect is being developed by Stefania Velazquez for Coderhouse ReactJS course. 
+It´s an ecommerce with shopping cart.
+
+## Tech Used:
+
+Bootstrap / React Bootstrap  / React Bootstrap Icons /
+Firebase / Formik / Yup / Sweet Alert 2
+
+
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
